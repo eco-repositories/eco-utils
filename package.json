@@ -8,7 +8,6 @@
     "packages/*"
   ],
   "scripts": {
-    "play": "npm -w playground run dev",
     "libs:init": "git submodule update --init --recursive",
     "libs:install": "git submodule foreach \"npm ci\"",
     "libs:build": "git submodule foreach \"npm run build -ws --if-present\""
