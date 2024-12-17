@@ -4,16 +4,11 @@ on:
   push:
     paths:
       - 'packages/**'
-      - '!packages/playground/**'
       - 'tsconfig.json'
 
-      - '.gitmodules'
-      - 'package-lock.json'
-      - 'package.json'
+      - 'package*.json'
 
       - '.github/workflows/**'
-      - '*.dockerfile'
-      - 'docker-compose.yaml'
 
 jobs:
   audit:
@@ -65,7 +60,7 @@ jobs:
         run: npm run libs:build
 
       - name: Build all workspaces
-        run: npm run build -w shared -w client -w server
+        run: npm run build -ws
 
   test:
     needs:
@@ -73,10 +68,6 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        workspace:
-          - client
-          - server
-          - shared
         os:
           - ubuntu-latest
           - macos-latest
@@ -94,11 +85,11 @@ jobs:
       - name: Install submodules
         run: npm run libs:install
 
-      - name: Install dependencies of '${{ matrix.workspace }}'
-        run: npm ci --workspace shared --workspace ${{ matrix.workspace }}
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build all submodules
         run: npm run libs:build
 
-      - name: Test '${{ matrix.workspace }}' on ${{ matrix.os }}
-        run: npm --workspace ${{ matrix.workspace }} test
+      - name: Test on ${{ matrix.os }}
+        run: npm test -ws
