@@ -7,11 +7,5 @@
   "compilerOptions": {
     "outDir": "dist",
     "composite": true,
-
-    // Alias
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-    },
   },
 }

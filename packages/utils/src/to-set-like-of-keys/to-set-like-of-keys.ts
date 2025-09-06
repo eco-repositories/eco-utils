@@ -1,4 +1,4 @@
-import { entriesOf } from '@/entries-of/entries-of.js'
+import { entriesOf } from '#@/entries-of/entries-of.js'
 
 export type SetLikeOfKeys<O extends object> = {
   [Key in keyof O]: Key
