@@ -5,6 +5,7 @@
     "./*.ts",
   ],
   "compilerOptions": {
+    "rootDir": ".",
     "outDir": "dist",
     "composite": true,
   },
