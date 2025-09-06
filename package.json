@@ -5,7 +5,7 @@
   "private": true,
   "repository": "https://github.com/eco-repositories/eco-utils",
   "workspaces": [
-    "packages/*"
+    "packages/**/*"
   ],
   "scripts": {
     "libs:init": "git submodule update --init --recursive",
