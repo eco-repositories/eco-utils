@@ -21,16 +21,16 @@
   "devDependencies": {
     "@eslint/eslintrc": "*",
     "@eslint/js": "*",
-    "@types/eslint__eslintrc": "2.1.2",
+    "@types/eslint__eslintrc": "*",
     "@types/node": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "eslint": "*",
-    "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-n": "17.15.0",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-n": "17.21.3",
     "eslint-plugin-promise": "7.2.1",
     "tsc-alias": "1.8.10",
     "typescript": "*",
-    "vitest": "2.1.8"
+    "vitest": "3.2.4"
   }
 }
