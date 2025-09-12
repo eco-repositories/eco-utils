@@ -4,7 +4,10 @@
   "private": true,
   "type": "module",
   "imports": {
-    "#@/*": "./dist/*"
+    "#@/*": {
+      "@parzh/map-src-to-dist": "./dist/*",
+      "default": "./src/*"
+    }
   },
   "exports": {
     ".": null,
