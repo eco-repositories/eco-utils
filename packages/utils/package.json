@@ -19,9 +19,8 @@
   "scripts": {
     "test": "vitest",
     "lint": "eslint \"**/*.ts\"",
-    "clean": "rm -rf dist/* ./*.tsbuildinfo",
-    "prebuild": "npm run clean",
-    "build": "tsc --project tsconfig.build.json"
+    "prebuild": "tsc --build --clean",
+    "build": "tsc --build --verbose"
   },
   "devDependencies": {
     "@eslint/eslintrc": "*",
