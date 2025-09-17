@@ -1,5 +1,5 @@
 import globals from "globals"
-import configBase from "../../eslint.config.mjs"
+import configBase from "./src/eslint/eslint.config.mjs"
 
 export default [
   {
@@ -12,14 +12,8 @@ export default [
         ...globals.node,
         ...globals.jest,
       },
-
-      ecmaVersion: 5,
-      sourceType: "script",
-
       parserOptions: {
-        project: [
-          "./tsconfig.json",
-        ],
+        project: "./tsconfig.json",
       },
     },
   },
