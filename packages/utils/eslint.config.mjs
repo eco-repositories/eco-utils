@@ -13,7 +13,7 @@ export default [
         ...globals.jest,
       },
       parserOptions: {
-        project: "./tsconfig.json",
+        project: "./tsconfig.eslint.json",
       },
     },
   },
