@@ -14,6 +14,10 @@
     "./*.js": {
       "types": "./dist/*.d.ts",
       "import": "./dist/*.js"
+    },
+    "./*.mjs": {
+      "types": "./dist/*.d.mts",
+      "import": "./dist/*.mjs"
     }
   },
   "scripts": {
